@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{CF19CDB9-FE12-4D11-AEE2-3C2E0E8A14DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvc_api", "Test\mvc_api.csproj", "{CF19CDB9-FE12-4D11-AEE2-3C2E0E8A14DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6896D2C4-E731-4FCA-814A-B0F5A8F83B07}
 	EndGlobalSection
 EndGlobal
