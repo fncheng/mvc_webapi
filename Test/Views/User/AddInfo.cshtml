@@ -7,18 +7,53 @@
 <h2>添加信息</h2>
 
 <body>
-    <div>
-        @using (Html.BeginForm("AddInfo1", "User", FormMethod.Post))
-        {
-            <p>
-                姓名:@Html.TextBox("UserName")<br />
-                性别:@Html.TextBox("UserSex")<br />
-                年龄:@Html.TextBox("UserAge")<br />
-                <br />
-                <input type="submit" value="提交" />
-            </p>
+    <script>
+        document.write("<h1>添加信息</h1>");
+        document.write("<p>用户信息</p>");
+    </script>
+    <script>
+        function myFunction(form) {
+            if (myForm.UserName.value == ' ') {
+                alert("用户名不能为空！")
+                form.UserName.focus();
+                return false;
+            }
+            if (myForm.UserSex.value == ' ') {
+                alert("性别不能为空！")
+                form.UserSex.focus();
+                return false;
+            }
+            if (myForm.UserAge.value == ' ') {
+                alert("年龄不能为空！")
+                form.UserAge.focus();
+                return false;
+            }
+            return true;
         }
-    </div>
+    </script>
+
+    <form action="AddInfo1" name="myForm" method="POST" onSubmit="return myFunction(this);">
+        <table cellpadding="0" cellspacing="0">
+            <tr><td>姓名: <input type="text" name="UserName" value=""></td></tr>
+            <tr><td>性别: <input type="text" name="UserSex" value=""></td></tr>
+            <tr><td>年龄: <input type="number" name="UserAge" value="" min="1" max="100"></td></tr>
+            <tr><td><br /></td></tr>
+            <tr><td><input type="submit" value="提交"></td></tr>
+        </table>
+    </form>
+
+    @*<div>
+            @using (Html.BeginForm("AddInfo1", "User", FormMethod.Post))
+            {
+                <p>
+                    姓名:@Html.TextBox("UserName")<br />
+                    性别:@Html.TextBox("UserSex")<br />
+                    年龄:@Html.TextBox("UserAge")<br />
+                    <br />
+                    <input type="submit" value="提交" />
+                </p>
+            }
+        </div>*@
 </body>
 
 <div>
